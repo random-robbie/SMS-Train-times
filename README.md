@@ -20,3 +20,5 @@ change the WKI to your station code and then once you have done this ensure you 
 go to functions.php 
 
 and alter the url for the CSV.
+
+Go to your textlocal account and point the incoming sms to your scripts location and then it will text you back the next train time!
