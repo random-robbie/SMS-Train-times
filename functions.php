@@ -85,11 +85,18 @@ function nexttrain()
         $nexttrain = $dbh->prepare("SELECT * FROM `Trains` WHERE `due` > CURRENT_TIME LIMIT 0 , 1 ");
 		$nexttrain->execute();
 		$result = $nexttrain->fetch(PDO::FETCH_ASSOC);
+		$iflate = $result['Status'];
+		if ($iflate == "On time")
+		{
+		$status = "On Time";
+		} else {
+		$status = "Is expected at ".$result['Status']."";
+		}
 		$due = substr($result['Due'], 0, 5);
 		$now = date('h:i');
 		$d = (strtotime($now) - strtotime($due))/60;
 		GLOBAL $message;
-		$message = ("The next train to depart from ".$station." is ".$due." and is currently ".$result['Status']."");
+		$message = ("The next train to depart from Hoylake is ".$due." and is currently ".$status."");
 		echo $message;
 		
 						}
