@@ -96,7 +96,7 @@ function nexttrain()
 		$now = date('h:i');
 		$d = (strtotime($now) - strtotime($due))/60;
 		GLOBAL $message;
-		$message = ("The next train to depart from Hoylake is ".$due." and is currently ".$status."");
+		$message = ("The next train to depart from ".$hoylake." is ".$due." and is currently ".$status."");
 		echo $message;
 		
 						}

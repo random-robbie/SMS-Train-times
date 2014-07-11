@@ -11,4 +11,7 @@ $station = ""; //Enter your local station name
 
 // database connection
 $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+
+//Train Station of Departure
+$station = "Hoylake";
 ?>
